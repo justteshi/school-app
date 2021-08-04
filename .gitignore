@@ -1,0 +1,11 @@
+_env
+db.sqlite3
+__pycache__
+.DS_STORE
+.idea/*
+*.mo
+EventRegistration/settings_local.py
+venv/
+env/
+.vscode/launch.json
+media

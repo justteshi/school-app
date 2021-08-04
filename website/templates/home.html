@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div>
+    <h1 style="text-align: center;">Home Page</h1>
+</div>
+<div class="container">
+    <div>
+        {% for article in articles %}
+        <div class="homepage-article">
+            <h3>{{article.title}}</h3>
+            <p>{{article.content}}</p>
+            <span>{{article.created_at|date:"j F y" }}</span>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
