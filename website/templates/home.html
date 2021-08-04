@@ -9,7 +9,7 @@
     <div>
         {% for article in articles %}
         <div class="homepage-article">
-            <h3>{{article.title}}</h3>
+            <h3 class="homepage-article-title">{{article.title}}</h3>
             <p>{{article.content}}</p>
             <span>{{article.created_at|date:"j F y" }}</span>
             <hr>

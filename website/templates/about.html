@@ -4,5 +4,17 @@
 {% block content %}
 <div>
     <h1 style="text-align: center;">About Page</h1>
+    <div class="container">
+        <div>
+            <h4>Teachers</h4>
+            {% for teacher in employees %}
+                <div>
+                    <p>{{ teacher.name }}</p>
+                    <p>{{ teacher.position }}</p>
+                    <p>{{ teacher.subject }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}

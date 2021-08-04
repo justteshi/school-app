@@ -6,3 +6,7 @@ from .models import *
 @admin.register(HomePageArticle)
 class HomePageArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at')
+
+@admin.register(SchoolEmployee)
+class SchoolEmployeeAdmin(admin.ModelAdmin):
+    list_display = ('name', 'position', 'subject')

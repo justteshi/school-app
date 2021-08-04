@@ -63,3 +63,7 @@ body {
 .nav li a:hover {
     color: var(--secondary-font-color);
 }
+
+.homepage-article-title{
+    color: var(--secondary-font-color);
+}
