@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
 <div>
@@ -8,10 +8,22 @@
         <div>
             <h4>Teachers</h4>
             {% for teacher in employees %}
-                <div>
-                    <p>{{ teacher.name }}</p>
-                    <p>{{ teacher.position }}</p>
-                    <p>{{ teacher.subject }}</p>
+                <div class="teacher-card">
+                    <div class="teacher-photo" style="background-image: url('{% static 'images/pgpche_logo.jpg' %}');"></div>
+                    <div class="teacher-info">
+                        <p class="teacher-card-text">Име Презиме Фамилия</p>
+                        <hr>
+                        <p>{{ teacher.name }}</p>
+                        <p class="teacher-card-text">Длъжност</p>
+                        <hr>
+                        <p>{{ teacher.position }}</p>
+                        <p class="teacher-card-text">Преподава по:</p>
+                        <hr>
+                        <p>{{ teacher.subject }}</p>
+                        <p class="teacher-card-text">Email</p>
+                        <hr>
+                        <p>mail@abv.bg</p>
+                    </div>
                 </div>
             {% endfor %}
         </div>

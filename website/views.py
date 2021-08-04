@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import Http404
-from .models import HomePageArticle, SchoolEmployee
+from .models import HomePageArticle, Teacher, Publication
 
 # Create your views here.
 
@@ -13,9 +13,17 @@ def home(request):
 
     return render(request, template, context)
 
+def publications(request):
+    template = 'publications.html'
+    publications = Publication.objects.all()
+    context = {
+        'publications' : publications
+    }
+    return render(request, template, context)
+
 def about(request):
     template = 'about.html'
-    employees = SchoolEmployee.objects.all()
+    employees = Teacher.objects.all()
     context = {
         'employees': employees
     }

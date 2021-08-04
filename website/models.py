@@ -10,7 +10,7 @@ class HomePageArticle(models.Model):
     def __str__(self):
         return self.title
 
-class SchoolEmployee(models.Model):
+class Teacher(models.Model):
     name = models.CharField(max_length=50)
     portfolio = models.CharField(max_length=50)
     position = models.CharField(max_length=50)
@@ -21,3 +21,10 @@ class SchoolEmployee(models.Model):
     def __str__(self):
         return self.name
 
+
+class Publication(models.Model):
+    title = models.CharField(max_length=200)
+    link = models.CharField(max_length=1024)
+    
+    def __str__(self):
+        return self.title
