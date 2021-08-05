@@ -1,8 +1,28 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
 <div>
     <h1 style="text-align: center;">Login Page</h1>
+</div>
+<div class="container">
+    <div class="login-form-wrapper">
+        <div class="login-logo" style="background-image: url('{% static 'images/pgpche_logo-removebg-preview.png' %}');"></div>
+        <div class="login-form">
+            <h3 style="text-align: center; padding-top: 1em;">Влизане</h3>
+            <hr>
+            <form action="" method="POST">
+                <label>Е-поща:</label>
+                <input placeholder="е-поща">
+                <label>Парола:</label>
+                <input placeholder="парола" type="password">
+                <button class="btn btn-success" type="submit">Вход</button>
+            </form>
+            <div class="help-login">
+                <a href="#">Искам регистрация</a>
+                <a href="#">Забравена парола</a>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

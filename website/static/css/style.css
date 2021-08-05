@@ -38,6 +38,9 @@ body {
 .nav-logo a {
     color: var(--main-font-color);
 }
+.nav-logo a:hover {
+    color: var(--secondary-font-color);
+}
 .nav-logo-text {
     margin: auto;
     margin-left: 10px;
@@ -69,7 +72,44 @@ body {
 .homepage-article-title{
     color: var(--secondary-font-color);
 }
+/* Footer */
+.footer-wrapper {
+    background: var(--main-color);
+}
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
+}
+.footer-center {
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.second-footer {
+    margin: auto;
+}
+.second-footer p {
+    text-align: center;
+    margin-bottom: 0;
+}
+.footer-all-rights {
+    background: var(--secondary-color);
+}
+.footer-all-rights p {
+    margin-bottom: 0;
+    padding: .5em;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Publications */
 .publications {
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +134,17 @@ body {
 }
 
 
-
+/* Teachers */
+.teacher-filter-wrapper {
+    background: var(--main-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+.teacher-cards-wrapper {
+    justify-content: center ;
+}
 .teacher-card {
     background: var(--main-color);
     border-radius: 5px;
@@ -123,4 +173,154 @@ body {
 .teacher-card-text {
     font-size: 12px;
     margin-bottom: 0;
+}
+
+/* Login */
+.login-form-wrapper {
+    padding: 2em;
+    padding-top: 2em;
+    border-radius: 5px;
+    background: var(--secondary-color);
+    width: 40%;
+    margin: auto;
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+.login-form form input {
+    padding: 1em;
+    /* margin-top: 1em; */
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.login-form form button {
+    width: 30%;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.login-form form label {
+    margin-left: 2em;
+}
+.login-logo {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--main-font-color);
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+}
+.help-login {
+    display: flex;
+    flex-direction: column;
+
+}
+.help-login a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    color: var(--main-font-color);
+}
+.help-login a:hover {
+    color: var(--secondary-font-color);
+}
+
+
+/* History */
+.history-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.history-left {
+    width: 49%;
+}
+.history-right {
+    width: 49%;
+}
+.history-right h1 {
+    margin: 1em;
+    color: var(--secondary-font-color);
+}
+
+/* Home Page */
+
+
+.home-first-section {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -50px;
+    z-index: 2;
+}
+.home-card {
+    padding: 2em;
+    padding-top: 4em;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    width: 30%;
+    height: 300px;
+    position: relative;
+}
+.home-card h4 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+.home-card a {
+    position: absolute;
+    bottom: -20px;
+    width: 100px;
+    text-align: center;
+    left: 50%;
+    margin-left: -50px;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    padding: 1em 0 1em 0;
+    border-radius: 25px;
+}
+.home-card-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    border-radius: 50%;
+}
+.home-card-icon i {
+    color: var(--secondary-font-color);
+    
+    position: relative;
+    top: calc(50% - 24px);
+    left: calc(50% - 27px);
+}
+.home-card a:hover {
+    background-color: var(--third-color);
+    color: var(--secondary-font-color);
+}
+.home-card:nth-child(2) {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+.home-card:nth-child(2) a {
+    background-color: var(--main-color);
+    color: var(--secondary-font-color);
+}
+.home-card:nth-child(2) a:hover {
+    background-color: var(--third-color);
+    color: var(--main-font-color);
 }

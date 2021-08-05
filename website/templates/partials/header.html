@@ -6,13 +6,23 @@
                 <div class="logo" style="background: url('{% static 'images/pgpche_logo-removebg-preview.png' %}'); background-size:contain;"></div>
                 <div class="nav-logo-text">
                     <div>ПГПЧЕ</div>
-                    <div>"Екзарх Йосиф"</div>
+                    <div class="nav-logo-title">"Екзарх Йосиф"</div>
                 </div>
             </a>
         </div>
         <ul class="nav">
             <li>
-                <a href="/about">About</a>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        За нас
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="/publications">Публикации</a></li>
+                        <li><a class="dropdown-item" href="/teachers">Учители</a></li>
+                        <li><a class="dropdown-item" href="/history">История</a></li>
+                    </ul>
+                </div>
+               
             </li>
             <li>
                 <a href="/schedules">Schedules</a>

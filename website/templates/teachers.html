@@ -5,10 +5,17 @@
 <div>
     <h1 style="text-align: center;">About Page</h1>
     <div class="container">
-        <div>
-            <h4>Teachers</h4>
-            {% for teacher in employees %}
-                <div class="teacher-card">
+        <h4>Teachers</h4>
+        <div class="teacher-filter-wrapper">
+            <button class="btn btn-success ms-2 me-2">Ръководство</button>
+            <button class="btn btn-secondary ms-2 me-2">Чужди езици</button>
+            <button class="btn btn-primary ms-2 me-2">Природни науки</button>
+            <button class="btn btn-warning ms-2 me-2">Обществени науки</button>
+
+        </div>
+        <div class="teacher-cards-wrapper row row-cols-3">
+            {% for teacher in teachers %}
+                <div class="teacher-card col">
                     <div class="teacher-photo" style="background-image: url('{% static 'images/pgpche_logo.jpg' %}');"></div>
                     <div class="teacher-info">
                         <p class="teacher-card-text">Име Презиме Фамилия</p>

@@ -20,13 +20,19 @@ def publications(request):
         'publications' : publications
     }
     return render(request, template, context)
+    
 
-def about(request):
-    template = 'about.html'
-    employees = Teacher.objects.all()
+def teachers(request):
+    template = 'teachers.html'
+    teachers = Teacher.objects.all()
     context = {
-        'employees': employees
+        'teachers': teachers
     }
+    return render(request, template, context)
+
+def history(request):
+    template = 'history.html'
+    context = {}
 
     return render(request, template, context)
 

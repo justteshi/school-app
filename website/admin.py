@@ -15,10 +15,14 @@ duplicate_article.short_description = "Duplicate selected record"
 @admin.register(HomePageArticle)
 class HomePageArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at')
+    actions = [duplicate_article]
+
 
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
     list_display = ('name', 'position', 'subject')
+    actions = [duplicate_article]
+
 
 @admin.register(Publication)
 class PublicationAdmin(admin.ModelAdmin):
