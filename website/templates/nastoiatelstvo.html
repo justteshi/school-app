@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .home-page-cover::before {
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: brightness(50%);
+        content:"";
+        left:0;
+        top:0;
+        width: 100%;
+        height:400px;
+        background-size:cover;
+        z-index:1;
+        filter: brightness(50%);
+        background-image: url("{% static 'images/sgrada.jpg' %}");
+        position: absolute;
+
+    }
+    .home-page-cover{
+        height: 400px;
+        width: 100%;
+        position: relative;
+    }
+    .home-page-title {
+        /* width: 50%; */
+        text-align: center;
+        margin: auto;
+        top: 30%;
+        color: #D1D99A;
+        font-size: 3em;
+    }
+    .home-page-cover .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        top: 80%;
+    }
+    .home-page-cover h1 {
+        color: #012840;
+        background: #D1D99A;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        
+    }
+    .home-page-cover p {
+        text-align: center;
+    }
+    .home-page-cover a {
+        text-decoration: none;
+        color: #D1D99A;
+    }
+    .home-page-cover a:hover {
+        text-decoration: none;
+        color: #788C64;
+    }
+    .nastoiatelstvo-wrapper {
+        margin-top: 6em;
+    }
+    .nastoiatelstvo-section-one h3 {
+        text-align: center;
+        width: 30%;
+        border-bottom: 5px solid #D1D99A;;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    .nastoiatelstvo-section-two {
+        background: #D1D99A;
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+    }
+    .nastoiatelstvo-section-two h3 {
+        text-align: center;
+        width: 30%;
+        border-bottom: 5px solid white;;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    .nastoiatelstvo-section-three {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    .nastoiatelstvo-section-three-left {
+        width: 45%;
+    }
+    .nastoiatelstvo-section-three-right {
+        width: 45%;
+    }
+    .nastoiatelstvo-section-three h4 {
+        text-align: center;
+        border-bottom: 5px solid #D1D99A;
+        padding: 10px;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .nastoiatelstvo-section-three a {
+        text-decoration: none;
+        text-align: center;
+        color: #315955;
+    }
+    .nastoiatelstvo-section-three a:hover {
+
+        color: #788C64;
+    }
+    .nastoiatelstvo-section-three hr {
+        margin: 0.5rem 0 0.5rem 0
+    }
+    .nastoiatelstvo-section-three-left ul,
+    .nastoiatelstvo-section-three-right ul {
+        list-style: none;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+    }
+</style>
+<div class="home-page-cover">
+    <div class="container">
+        <p><a href="/">За нас > </a><a href="/nastoiatelstvo">Настоятелство</a></p>
+        <h1>Училищно настоятелство</h1>
+    </div>
+</div>
+<div class="nastoiatelstvo-wrapper">
+    <div class="container nastoiatelstvo-section-one">
+        <h3>Покана</h3>
+        <p>
+             Съвета на настоятелите на Сдружение с нестопанска цел за общественополезна дейност „Училищно настоятелство при профилирана гимназия с преподаване на чужди езици  „Екзарх Йосиф”  гр.Разград  (наричано в настоящия документ сдружението) на основание чл.26 от ЗЮЛНЦ свиква Общо събрание на сдружението на 28 септември 2020 г. от 17:30 ч.  на Сдружение с нестопанска цел за общественополезна дейност  „Училищно настоятелство при профилирана гимназия с преподаване на чужди езици  „Екзарх Йосиф”  гр.Разград, в заседателната зала на ПГПЧЕ „Екзарх Йосиф” Разград при стриктно спазване на въведените временни мерки, във връзка с обявеното на 13.03.2020 г. извънредно положение в страната с Решение на Народното събрание, заповеди на Министъра на здравеопазването свързани с епидемиологичен взрив на заболяването от вируса COVID 19 при следния дневен ред:
+        </p>
+        <ul style="list-style: none;">
+            <li>1. Приемане на нови членове на  Училищно настоятелство при ПГПЧЕ  „Екзарх Йосиф”  гр.Разград.</li>
+            <li>2. Доклад за дейността на Сдружението за 2019 г.</li>
+            <li>3. Приемане на годишен финансов отчет за 2019 г. на Сдружението.</li>
+            <li>4. Приемане програма за дейността на Сдружението  за 2020-21 г.</li>
+            <li>5. Освобождаване на членове на Училищното настоятелство по чл.15, т.4 от Устава.</li>
+            <li>6. Организационни въпроси.</li>
+        </ul>
+        <p>Съвета на настоятелите кани всички членове на настоятелството да присъстват и да заявят становище по въпросите от дневния ред.
+            При липса на кворум на основание чл.22, ал.1, изр. второ от устава на Училищно настоятелство при ПГПЧЕ „Екзарх Йосиф гр.Разград”–гр.Разград(УН)/чл.27 от ЗЮЛНЦ, същото се проведе един час по-късно, на същото място и при същия дневен ред.
+        </p>
+        <p style="text-align: end;">Председател: Виргиния Станкова</p>
+        <p style="text-align: end;">Секретар: Деница Йорданова</p>
+        <p style="text-align: end;">Дата:25.08.2020 г.</p>
+    </div>
+    <div class="nastoiatelstvo-section-two">
+        <div class="container">
+            <h3>Настоятелство</h3>
+            <div style="display: flex; justify-content: center;">
+                <ul style="padding-top: 2em;">
+                    <li style="list-style: none;  margin-top: 1em; font-size: 20px;">Председател:</li>
+                    <li>ВИРГИНИЯ НИКОЛАЕВА СТАНКОВА</li>
+    
+                    <li style="list-style: none; margin-top: 1em; font-size: 20px;">Секретар:</li>
+                    <li>ДЕНИЦА ВЛАДИСЛАВОВА ЙОРДАНОВА</li>
+                </ul>
+                <ul>
+                    <li style="list-style: none;margin-top: 1em; font-size: 20px;">Членове:</li>
+                    <li>ЕЛИЦА ИВАНОВА МИЛКОВА</li>
+                    <li>ГАЛИНА МАРИНОВА ТЕРЗИЕВА</li>
+                    <li>ДЕЯН ПАВЛОВ КОЛАРОВ</li>
+                    <li>ДИМИТЪР ПЕНЧЕВ ГАБРОВСКИ</li>
+                    <li>ВАСИЛ МАРИНОВ ВАСИЛЕВ</li>
+                    <li>КИРИЛ ДИМИТРОВ ЙОРДАНОВ</li>
+                    <li>ИСМАИЛ АХМЕДОВ КАСАБОВ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container nastoiatelstvo-section-three">
+        <div style="display: flex; justify-content: space-around;">
+            <div class="nastoiatelstvo-section-three-left">
+                <h4>Документи</h4>
+                <ul>
+                    <li><a href="#">Програма за осъществяване на дейността на сдружение с нестопанска цел Училищно настоятество</a></li>
+                    <hr>
+                    <li><a href="">Регистрация</a></li>
+                    <hr>
+                    <li><a href="">Устав</a></li>
+                    <hr>
+                    <li><a href="">Протокол на УН 17-04-2019</a></li>
+                    <hr>
+                    <li><a href="">Протокол на УН 28-03-2019</a></li>
+                    <hr>
+                    <li><a href="">Протокол и отчет на УН 15-01-2019</a></li>
+                    <hr>
+                    <li><a href="">Протокол от заседание на УН 14-12-2018</a></li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="nastoiatelstvo-section-three-right">
+                <h4>Архив</h4>
+                <ul>
+                    <li><a href="">Устав на училищното настоятелство</a></li>
+                    <hr>
+                    <li><a href="">Правилник на училищното настоятелство</a></li>
+                    <hr>
+                    <li><a href="">Програма на училищното настоятелство</a></li>
+                    <hr>
+                    <li><a href="">Протокол на Общото събрание на Училищното настоятелство</a></li>
+                    <hr>
+                    <li><a href="">Протокол от събрание на Съвета на настоятелите</a></li>
+                    <hr>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

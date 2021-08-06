@@ -21,7 +21,6 @@ def publications(request):
     }
     return render(request, template, context)
     
-
 def teachers(request):
     template = 'teachers.html'
     teachers = Teacher.objects.all()
@@ -36,8 +35,20 @@ def history(request):
 
     return render(request, template, context)
 
-def schedules(request):
-    template = 'schedules.html'
+def budget(request):
+    template = 'budget.html'
+    context = {}
+
+    return render(request, template, context)
+
+def nastoiatelstvo(request):
+    template = 'nastoiatelstvo.html'
+    context = {}
+
+    return render(request, template, context)
+
+def syllabus(request):
+    template = 'syllabus.html'
     context = {}
 
     return render(request, template, context)

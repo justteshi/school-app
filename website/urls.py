@@ -8,7 +8,6 @@ urlpatterns = [
     path('publications/', views.publications, name='publications'),
     path('teachers/', views.teachers, name='teachers'),
     path('history/', views.history, name='history'),
-    path('schedules/', views.schedules, name='schedules'),
     path('documents/', views.documents, name='documents'),
     path('competitions/', views.competitions, name='competitions'),
     path('exams/', views.exams, name='exams'),
@@ -16,5 +15,8 @@ urlpatterns = [
     path('diary/', views.diary, name='school_diary'),
     path('contacts/', views.contacts, name='contacts'),
     path('more/', views.more, name='more'),
+    path('budget/', views.budget, name='budget'),
+    path('nastoiatelstvo/', views.nastoiatelstvo, name='nastoiatelstvo'),
+    path('syllabus/', views.syllabus, name='syllabus'),
     path('login/', views.login, name='login'),
 ]

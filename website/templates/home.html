@@ -59,14 +59,31 @@
     
         </div>
         <div class="home-card">
-            <div class="home-card-icon"></div>
+            <div class="home-card-icon">
+                <i class="fas fa-globe fa-3x"></i>
+            </div>
             <h4>Първа езикова е сред десетте най-силно представили се училища в България на НВО по БЕЛ ! Пожелаваме ви нови успехи! Ангел Митев</h4>
             <a href="#">Виж</a>
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="messages-wrapper" style="width: 80%; margin: auto;">
+    <div class="owl-carousel owl-theme">
+        {% for article in articles %}
+        <div class="item">
+            <div class="homepage-message">
+                <h3 class="homepage-article-title">{{article.title}}</h3>
+                <span>{{article.created_at|date:"j F y" }}</span>
+                <hr>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+
+<!-- <div class="container">
     <div>
         {% for article in articles %}
         <div class="homepage-article">
@@ -77,6 +94,30 @@
         </div>
         {% endfor %}
     </div>
-</div>
+</div> -->
 
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:false,
+            loop:false,
+            autoplay: true,
+            dots: true
+        }
+    }
+})
+</script>
 {% endblock %}

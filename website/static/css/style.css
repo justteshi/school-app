@@ -18,6 +18,42 @@ body {
 }
 
 /* Navigation */
+.upper-header-wrapper {
+    background: var(--secondary-color);
+}
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+}
+.upper-header-left {
+    display: flex;
+    font-size: 13px;
+}
+.upper-header-left p {
+    margin-bottom: 0;
+}
+.upper-header-right .fa-facebook-f {
+    position: relative;
+    top: 2px;
+    left: 10px;
+    color: var(--main-font-color);
+}
+.upper-header-right .fa-users {
+    position: relative;
+    top: 2px;
+    left: 5px;
+    color: var(--main-font-color);
+}
+.upper-header-right a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.upper-header-right a:hover {
+    background: var(--secondary-font-color);
+    color: var(--main-color);
+}
+
 .nav-wrapper {
     background: var(--main-color);
 
@@ -113,6 +149,8 @@ body {
 .publications {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 6em;
+    margin-bottom: 3em;
 }
 .publications-card {
     flex: 30%;
@@ -330,4 +368,12 @@ body {
 .fa-pencil-alt {
     top: calc(50% - 24px) !important;
     left: calc(50% - 24px) !important;
+}
+.fa-globe {
+    top: calc(50% - 23.25px) !important;
+    left: calc(50% - 24px) !important;
+}
+
+.messages-wrapper {
+    
 }

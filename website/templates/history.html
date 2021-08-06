@@ -3,14 +3,6 @@
 
 {% block content %}
 <style>
-    .history-page-cover {
-        background-image: url("{% static 'images/sgrada.jpg' %}");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 350px;
-        filter: brightness(50%);
-    }
     .history-photo-1 {
         background-image: url("{% static 'images/sgrada2.jpg' %}");
         background-size: cover;
@@ -47,11 +39,78 @@
         height: 400px;
         border-radius: 5px;
     }
+
+    .home-page-cover::before {
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: brightness(50%);
+        content:"";
+        left:0;
+        top:0;
+        width: 100%;
+        height:400px;
+        background-size:cover;
+        z-index:1;
+        filter: brightness(50%);
+        background-image: url("{% static 'images/sgrada.jpg' %}");
+        position: absolute;
+
+    }
+    .home-page-cover{
+        height: 400px;
+        width: 100%;
+        position: relative;
+    }
+    .home-page-title {
+        /* width: 50%; */
+        text-align: center;
+        margin: auto;
+        top: 30%;
+        color: #D1D99A;
+        font-size: 3em;
+    }
+    .home-page-cover .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        top: 80%;
+    }
+    .home-page-cover h1 {
+        color: #012840;
+        background: #D1D99A;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        
+    }
+    .home-page-cover p {
+        text-align: center;
+    }
+    .home-page-cover a {
+        text-decoration: none;
+        color: #D1D99A;
+    }
+    .home-page-cover a:hover {
+        text-decoration: none;
+        color: #788C64;
+    }
+    .history-container {
+        margin-top: 6em;
+        margin-bottom: 3em;
+    }
 </style>
 
-<div class="history-page-cover">
-    
+<div class="home-page-cover">
+    <div class="container">
+        <p><a href="/">За нас > </a><a href="/history">История</a></p>
+        <h1>История</h1>
+    </div>
 </div>
+
+<!-- TODO Add school symbols here -->
 <div class="container history-container">
     <div class="history-left">
         <div class="history-photo-1"></div>
@@ -67,7 +126,6 @@
     </div>
 
     <div class="history-right">
-        <h1>История</h1>
         <p style="font-size: 14px; margin-top: 2em;">
             Желанието за знание и духовна извисеност никога не са напускали българите. Дори в най-трудните времена на османска власт успяваме да съхраним и развием този стремеж към просвета и се опитваме да запазим натрупания опит. Възраждането по българските земи се оказва дълъг и сложен процес, протичащ неравномерно и с големи перипетии. От началото на XIX век става ясно едно – макар и късно, българите искат всичко и то час по – скоро, а това включва светско образование, самостоятелна църква и  национална свобода. Училището има водеща роля при  изграждането на едно ново общество. То трябва да даде необходимите знания, да формира новите мислещи хора, приели идеите за нация, национална принадлежност и държава като свои. Просветното движение в Разград започва своето развитие през XVII век, откогато са и първите сведения за съществуване на килийно училище. През 1860 е открито и първото класно училище – в стая към църквата „Свети Николай Чудотворец”. Още преди Освобождението е построена и отделна сграда на два етажа и девет класни стаи. На прага на Съединението разградската общественост взема решение за построяването на нова сграда. Проектът, възложен на австрийския архитект Фридрих Грюнангер, по това време архитект на Разград, е осъществен за две години. Новата уникална училищна сграда, която носи белезите на австроунгарската барокова архитектура, посреща за първи път свои ученици през учебната 1885/1886 година с прием на мъжките паралелки на класното училище. Постепенно курсът на обучение се разширява и с откриването на 7 клас през 1895/96 г. Класното училище се превръща в едно от 9-те пълни мъжки гимназии в страната под името Пълна окръжна мъжка гимназия „Екзарх Йосиф І“, чието име приема на 7 април 1902 г., по повод 25-годишнината от народополезната дейност и с личната благословия на българския екзарх. Старата сграда на Разградската гимназия – делегиран паметник на културата с местно значение, остава символ на образованието в Разград и региона до днес.
             ГПЧЕ”Екзарх Йосиф” е приемник на едно от най –старите училища, свързани с историята на образованието, открито преди 125 години. През различните етапи от своето съществуване гиназията носи различни наименования – СПУ, ПГ, ЕСПУ, СОУ, като от 1948 до 1991 се нарича „Никола Вапцаров”.

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}"/>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,12 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <!-- Fontawsome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <title>School System</title>
+    <link rel="stylesheet" href="{% static 'owlcarousel/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'owlcarousel/owl.theme.default.min.css' %}">
+		
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="{% static 'owlcarousel/owl.carousel.min.js' %}"></script>
+    <title>PGPCHE Razgrad</title>
 </head>
 <body>
     {% include 'partials/header.html' %}
