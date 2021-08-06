@@ -324,3 +324,10 @@ body {
     background-color: var(--third-color);
     color: var(--main-font-color);
 }
+.home-card:nth-child(2) .home-card-icon {
+    background: var(--main-color);
+}
+.fa-pencil-alt {
+    top: calc(50% - 24px) !important;
+    left: calc(50% - 24px) !important;
+}
