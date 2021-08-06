@@ -374,6 +374,28 @@ body {
     left: calc(50% - 24px) !important;
 }
 
+.messages-title {
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 1em;
+    border-bottom: 5px solid var(--main-color);
+}
 .messages-wrapper {
-    
+    background: var(--main-color);
+    margin-top: 2em;
+    margin-bottom: 3em
+}
+.messages-container {
+    padding: 4em 0 2em 0;
+}
+
+.messages-card {
+    background: white;
+    border-radius: 5px;
+    padding: 2em;
+    height: 250px;
+}
+.owl-dots {
+    margin-top: 2em !important;
 }

@@ -67,19 +67,21 @@
         </div>
     </div>
 </div>
-
-<div class="messages-wrapper" style="width: 80%; margin: auto;">
-    <div class="owl-carousel owl-theme">
-        {% for article in articles %}
-        <div class="item">
-            <div class="homepage-message">
-                <h3 class="homepage-article-title">{{article.title}}</h3>
-                <span>{{article.created_at|date:"j F y" }}</span>
-                <hr>
+<h1 class="messages-title">Съобщения</h1>
+<div class="messages-wrapper">
+    <div class="messages-container" style="width: 80%; margin: auto;">
+        <div class="owl-carousel owl-theme">
+            {% for article in articles %}
+            <div class="item messages-card">
+                <div class="homepage-message">
+                    <h3 class="homepage-article-title">{{article.title}}</h3>
+                    <a href="#">Прочети</a>
+                    <p>{{article.created_at|date:"j F y" }}</p>
+                </div>
             </div>
+            {% endfor %}
+            
         </div>
-        {% endfor %}
-        
     </div>
 </div>
 
@@ -99,7 +101,7 @@
 <script>
     $('.owl-carousel').owlCarousel({
     loop:true,
-    margin:10,
+    margin:40,
     responsiveClass:true,
     responsive:{
         0:{
