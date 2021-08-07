@@ -75,8 +75,12 @@
             <div class="item messages-card">
                 <div class="homepage-message">
                     <h3 class="homepage-article-title">{{article.title}}</h3>
+                    <p>Дата: {{article.created_at|date:"j F y" }}</p>
+                    {% if article.important %}
+                    <p class="is-message-important">Важно</p>
+                    {% else %}
+                    {% endif %}
                     <a href="#">Прочети</a>
-                    <p>{{article.created_at|date:"j F y" }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -84,19 +88,19 @@
         </div>
     </div>
 </div>
-
-<!-- <div class="container">
-    <div>
+<h1 class="news-title">Новини</h1>
+<div class="container">
+    <div class="news-wrapper">
         {% for article in articles %}
-        <div class="homepage-article">
-            <h3 class="homepage-article-title">{{article.title}}</h3>
+        <div class="news-article">
+            <h3 class="news-article-title">{{article.title}}</h3>
             <p>{{article.content}}</p>
-            <span>{{article.created_at|date:"j F y" }}</span>
+            <p class="news-date">Дата: {{article.created_at|date:"j F y" }}</span>
             <hr>
         </div>
         {% endfor %}
     </div>
-</div> -->
+</div>
 
 <script>
     $('.owl-carousel').owlCarousel({
@@ -117,7 +121,9 @@
             nav:false,
             loop:false,
             autoplay: true,
-            dots: true
+            dots: true,
+            slideBy:1,
+            rewind: true
         }
     }
 })

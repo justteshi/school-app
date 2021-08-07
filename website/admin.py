@@ -1,4 +1,4 @@
-from website.models import HomePageArticle
+from website.models import HomePageMessages
 from django.contrib import admin
 from .models import *
 
@@ -12,8 +12,8 @@ def duplicate_article(modeladmin, request, queryset):
 duplicate_article.short_description = "Duplicate selected record"
 
 
-@admin.register(HomePageArticle)
-class HomePageArticleAdmin(admin.ModelAdmin):
+@admin.register(HomePageMessages)
+class HomePageMessagesAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at')
     actions = [duplicate_article]
 
@@ -28,3 +28,7 @@ class TeacherAdmin(admin.ModelAdmin):
 class PublicationAdmin(admin.ModelAdmin):
     list_display = ('title', 'link')
     actions = [duplicate_article]
+
+@admin.register(Budget)
+class BudgetAdmin(admin.ModelAdmin):
+    list_display = ('title', 'year')

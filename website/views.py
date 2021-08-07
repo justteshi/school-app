@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from django.http import Http404
-from .models import HomePageArticle, Teacher, Publication
+from .models import Budget, HomePageMessages, Teacher, Publication, Budget
 
 # Create your views here.
 
 def home(request):
     template = 'home.html'
-    articles = HomePageArticle.objects.all()
+    articles = HomePageMessages.objects.all()
+
     context = {
-        'articles': articles
+        'articles': articles.order_by('-created_at')
     }
 
     return render(request, template, context)
@@ -37,7 +38,20 @@ def history(request):
 
 def budget(request):
     template = 'budget.html'
-    context = {}
+
+    budgets = Budget.objects.all()
+    years = Budget.objects.values_list('year', flat=True)
+    years_list = []
+    for year in years:
+        if year in years_list:
+            continue
+        else:
+            years_list.append(year)
+
+    context = {
+        'budgets': budgets,
+        'years_list': years_list[::-1],
+    }
 
     return render(request, template, context)
 
