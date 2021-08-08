@@ -1,8 +1,117 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
-<div>
-    <h1 style="text-align: center;">More Page</h1>
+<style>
+    .home-page-cover::before {
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: brightness(50%);
+        content:"";
+        left:0;
+        top:0;
+        width: 100%;
+        height:400px;
+        background-size:cover;
+        z-index:1;
+        filter: brightness(50%);
+        background-image: url("{% static 'images/sgrada.jpg' %}");
+        position: absolute;
+
+    }
+    .home-page-cover{
+        height: 400px;
+        width: 100%;
+        position: relative;
+    }
+    .home-page-title {
+        /* width: 50%; */
+        text-align: center;
+        margin: auto;
+        top: 30%;
+        color: #D1D99A;
+        font-size: 3em;
+    }
+    .home-page-cover .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        top: 80%;
+    }
+    .home-page-cover h1 {
+        color: #012840;
+        background: #D1D99A;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        
+    }
+    .home-page-cover p {
+        text-align: center;
+    }
+    .home-page-cover a {
+        text-decoration: none;
+        color: #D1D99A;
+    }
+    .home-page-cover a:hover {
+        text-decoration: none;
+        color: #788C64;
+    }
+</style>
+<div class="home-page-cover">
+    <div class="container">
+        <p><a href="/">За нас > </a><a href="/schedule">Разписание Часове</a></p>
+        <h1>Разписание Часове</h1>
+    </div>
 </div>
+
+<div class="container schedule-wrapper">
+    <div class="schedule-header-wrapper">
+        <div class="schedule-header">
+            І учебен корпус (8, 11 и 12 клас)
+        </div>
+        <div class="schedule-header">
+            ІІ учебен корпус (9 и 10 клас)
+        </div>
+    </div>
+    <div class="schedule-body-wrapper">
+        <div class="schedule-body">
+            <p>1. 07:45 – 08:30</p>
+            <hr>
+            <p>2. 08:40 – 09:25</p>
+            <hr>
+            <p>3. 09:45 – 10:30</p>
+            <hr>
+            <p>4. 10:40 – 11:25</p>
+            <hr>
+            <p>5. 11:35 – 12:20</p>
+            <hr>
+            <p>6. 12:30 – 13:15</p>
+            <hr>
+            <p>7. 13:35 – 14:20</p>
+            <hr>
+        </div>
+        
+        <div class="schedule-body">
+            <p>1. 07:55 – 08:40</p>
+            <hr>
+            <p>2. 09:00 – 09:45</p>
+            <hr>
+            <p>3. 09:55 – 10:40</p>
+            <hr>
+            <p>4. 10:50 – 11:35</p>
+            <hr>
+            <p>5. 11:45 – 12:30</p>
+            <hr>
+            <p>6. 12:50 – 13:35</p>
+            <hr>
+            <p>7. 13:40 – 14:25</p>
+            <hr>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

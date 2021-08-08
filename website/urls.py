@@ -18,5 +18,6 @@ urlpatterns = [
     path('budget/', views.budget, name='budget'),
     path('nastoiatelstvo/', views.nastoiatelstvo, name='nastoiatelstvo'),
     path('syllabus/', views.syllabus, name='syllabus'),
+    path('schedule/', views.schedule, name='schedule'),
     path('login/', views.login, name='login'),
 ]

@@ -61,6 +61,12 @@ def nastoiatelstvo(request):
 
     return render(request, template, context)
 
+def schedule(request):
+    template = 'schedules.html'
+    context = {}
+
+    return render(request, template, context)
+
 def syllabus(request):
     template = 'syllabus.html'
     context = {}

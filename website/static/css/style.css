@@ -495,3 +495,33 @@ body {
 .card-body a {
     color: var(--secondary-font-color);
 }
+
+/* Schedule Page */
+
+.schedule-wrapper {
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+.schedule-header-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.schedule-header {
+    padding:  15px 20px;
+    border-radius: 25px;
+    background: var(--main-color);
+}
+.schedule-body-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.schedule-body {
+    margin-top: 1em;
+}
+.schedule-body hr {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.schedule-body p {
+    margin-bottom: 0;
+}
