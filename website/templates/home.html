@@ -80,7 +80,7 @@
                     <p class="is-message-important">Важно</p>
                     {% else %}
                     {% endif %}
-                    <a href="#">Прочети</a>
+                    <a href="{% url 'messages_detail_view' article.id %}">Прочети</a>
                 </div>
             </div>
             {% endfor %}

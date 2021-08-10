@@ -14,6 +14,19 @@ def home(request):
 
     return render(request, template, context)
 
+def messages_detail_view(request, id):
+    try:
+        message = HomePageMessages.objects.filter(id=id)
+    except HomePageMessages.DoesNotExist:
+        return Http404()
+    
+    template = 'message_page.html'
+    context = {
+        'message': message
+    }
+    
+    return render(request, template, context)
+
 def publications(request):
     template = 'publications.html'
     publications = Publication.objects.all()
