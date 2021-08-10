@@ -20,6 +20,7 @@ urlpatterns = [
     path('syllabus/', views.syllabus, name='syllabus'),
     path('schedule/', views.schedule, name='schedule'),
     path('message/<int:id>', views.messages_detail_view, name='messages_detail_view'),
-
+    path('class-tests/', views.class_tests, name='class-tests'),
+    
     path('login/', views.login, name='login'),
 ]

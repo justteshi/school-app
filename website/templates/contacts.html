@@ -1,8 +1,106 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
-<div>
-    <h1 style="text-align: center;">Contacts Page</h1>
+<style>
+    .home-page-cover::before {
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: brightness(50%);
+        content:"";
+        left:0;
+        top:0;
+        width: 100%;
+        height:400px;
+        background-size:cover;
+        z-index:1;
+        filter: brightness(50%);
+        background-image: url("{% static 'images/sgrada.jpg' %}");
+        position: absolute;
+
+    }
+    .home-page-cover{
+        height: 400px;
+        width: 100%;
+        position: relative;
+    }
+    .home-page-title {
+        /* width: 50%; */
+        text-align: center;
+        margin: auto;
+        top: 30%;
+        color: #D1D99A;
+        font-size: 3em;
+    }
+    .home-page-cover .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        top: 80%;
+    }
+    .home-page-cover h1 {
+        color: #012840;
+        background: #D1D99A;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        
+    }
+    .home-page-cover p {
+        text-align: center;
+    }
+    .home-page-cover a {
+        text-decoration: none;
+        color: #D1D99A;
+    }
+    .home-page-cover a:hover {
+        text-decoration: none;
+        color: #788C64;
+    }
+</style>
+<div class="home-page-cover">
+    <div class="container">
+        <p><a href="/">Начало > </a><a href="/contacts">Контакти</a></p>
+        <h1>Контакти</h1>
+    </div>
+</div>
+<div class="contacs-form-wrapper container">
+    <div class="contacts-left">
+        <h4>Адрес</h4>
+        <div class="contacts-address">
+            <p>ул. Н. Й. Вапцаров №10, 7200 гр. Разград</p>
+        </div>
+        <h4>Телефони</h4>
+        <div class="contacts-phones">
+            <p>Директор : 0878684374</p>
+            <p>Канцелария: 0879835888</p>
+            <p>Гл.счетоводител: 0879835887</p>
+        </div>
+        <h4>Email</h4>
+        <div class="contacts-email">
+            <p>gpche_razgrad@abv.bg</p>
+        </div>
+    </div>
+    <form class="contacts-form">
+        <label>Вашето Име</label>
+        <input>
+        <label>Вашия email</label>
+        <input>
+        <label>Относно</label>
+        <input>
+        <label>Съдържание</label>
+        <textarea></textarea>
+        <button class="btn btn-success">Изпрати</button>
+    </form>
+</div>
+
+<div class="contacts-usefull-links-wrapper">
+
+</div>
+<div style="width: 100%; margin-bottom: -7px;"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=+(%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F%20%D1%81%20%D0%BF%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%BD%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B8%20%D0%B5%D0%B7%D0%B8%D1%86%D0%B8%20%E2%80%9E%D0%95%D0%BA%D0%B7%D0%B0%D1%80%D1%85%20%D0%99%D0%BE%D1%81%D0%B8%D1%84%E2%80%9C)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="400" frameborder="0">
+</iframe>
 </div>
 {% endblock %}

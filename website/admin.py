@@ -32,3 +32,8 @@ class PublicationAdmin(admin.ModelAdmin):
 @admin.register(Budget)
 class BudgetAdmin(admin.ModelAdmin):
     list_display = ('title', 'year')
+
+
+@admin.register(ClassTest)
+class ClassTestAdmin(admin.ModelAdmin):
+    list_display = ('subject', 'klas', 'paralelka', 'srok', 'date')

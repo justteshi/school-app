@@ -86,6 +86,12 @@ def syllabus(request):
 
     return render(request, template, context)
 
+def class_tests(request):
+    template = 'class_tests.html'
+    context = {}
+
+    return render(request, template, context)
+
 def documents(request):
     template = 'documents.html'
     context = {}

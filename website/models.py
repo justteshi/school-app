@@ -52,3 +52,40 @@ class Budget(models.Model):
     link = CharField(max_length=500)
     def __str__(self):
         return self.title
+
+
+class ClassTest(models.Model):
+    SUBJECT_CHOICES = (
+        ('Математика', 'Математика'),
+        ('Български език и литература', 'Български език и литература'),
+        ('Английски език', 'Английски език'),
+        ('Немски език', 'Немски език'),
+        ('Испански език', 'Испански език'),
+        ('Руски език', 'Руски език')
+    )
+    SROK_CHOICES = (
+        ('I срок', 'I срок'),
+        ('II срок', 'II срок')
+    )
+    KLAS_CHOICES = (
+        ('8','8'),
+        ('9','9'),
+        ('10','10'),
+        ('11','11'),
+        ('12','12'),
+    )
+    PARALELKA_CHOICES = (
+        ('А', 'А'),
+        ('Б', 'Б'),
+        ('В', 'В'),
+        ('Г', 'Г'),
+    )
+
+    subject = models.CharField(max_length=50, choices=SUBJECT_CHOICES)
+    date = models.DateField()
+    srok = models.CharField(max_length=10, choices=SROK_CHOICES)
+    klas = models.CharField(max_length=50, choices=KLAS_CHOICES)
+    paralelka = models.CharField(max_length=10, choices=PARALELKA_CHOICES)
+
+    def __Str__(self):
+        return self.subject + self.klas + self.paralelka
