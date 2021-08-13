@@ -7,16 +7,16 @@
     <div class="login-form-wrapper">
         <div class="login-logo" style="background-image: url('{% static 'images/pgpche_logo-removebg-preview.png' %}');"></div>
         <div class="login-form">
-            <h3 style="text-align: center; padding-top: 1em;">Влизане</h3>
+            <h3 style="text-align: center; padding-top: 1em;">Регистрация</h3>
             <hr>
             <form action="" method="POST">
                 {% csrf_token %}
                 {{ form.as_table }}
-                <button class="btn btn-success" type="submit">Вход</button>
+                <button class="btn btn-success" type="submit">Напред</button>
             </form>
             <div class="help-login">
-                <a href="/register">Искам регистрация</a>
-                <a href="#">Забравена парола</a>
+                <a href="/login">Влизане</a>
+
             </div>
         </div>
     </div>

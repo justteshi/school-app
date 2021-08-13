@@ -439,7 +439,6 @@ body {
     top: 0;
     left: 0;
     background: var(--secondary-color);
-    color: ;
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 5px 0 5px 0;
@@ -594,4 +593,32 @@ body {
 
 .contacts-usefull-links-wrapper {
     background: var(--main-color);
+    
+    margin-top: 2em;
+    padding: 2em 0 ;
+}
+.usefull-links {
+    display: flex;
+    justify-content: center;
+}
+.usefull-links ul {
+    width: 50%;
+    margin: auto;
+}
+.contacts-usefull-left p,
+.contacts-usefull-right p  {
+    border-bottom: 4px solid white;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+.contacts-usefull-left {
+    margin-right: 2em;
+    width: 45%;
+}
+.contacts-usefull-right {
+    margin-left: 2em;
+    width: 45%;
+
 }
