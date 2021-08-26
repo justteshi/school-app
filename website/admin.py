@@ -20,7 +20,7 @@ class HomePageMessagesAdmin(admin.ModelAdmin):
 
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
-    list_display = ('name', 'position', 'subject')
+    list_display = ('name', 'position', 'subject', 'type')
     actions = [duplicate_article]
 
 

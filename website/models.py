@@ -12,10 +12,18 @@ class HomePageMessages(models.Model):
         return self.title
 
 class Teacher(models.Model):
+    TEACHER_TYPE = (
+        ('Ръководство', 'Ръководство'),
+        ('Чужди езици', 'Чужди езици'),
+        ('Природни науки', 'Природни науки'),
+        ('Обществени науки', 'Обществени науки'),
+    )
+
     name = models.CharField(max_length=50)
     portfolio = models.CharField(max_length=50)
     position = models.CharField(max_length=50)
     subject = models.CharField(max_length=50)
+    type = models.CharField(max_length=256, choices=TEACHER_TYPE, null=True, blank=True)
     #TODO create custom method to rename the photo and folder location
     photo = models.ImageField(upload_to='teachers', null=True, blank=True)
 

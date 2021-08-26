@@ -76,10 +76,13 @@
 <div class="teachers-wrapper">
     <div class="container">
         <div class="teacher-filter-wrapper">
-            <button class="btn btn-success ml-2 mr-2">Ръководство</button>
-            <button class="btn btn-secondary ml-2 mr-2">Чужди езици</button>
-            <button class="btn btn-primary ml-2 mr-2">Природни науки</button>
-            <button class="btn btn-warning ml-2 mr-2">Обществени науки</button>
+            <form method="get">
+                <a href="/teachers" class="btn btn-secondary">Всички</a>
+                <a href="?type=Ръководство" class="btn btn-success">Ръководство</a>
+                <a href="?type=Чужди езици" class="btn btn-primary">Чужди езици</a>
+                <a href="?type=Природни науки" class="btn btn-warning">Природни науки</a>
+                <a href="?type=Обществени науки" class="btn btn-danger">Обществени науки</a>
+            </form>
 
         </div>
         <div class="teacher-cards-wrapper row">

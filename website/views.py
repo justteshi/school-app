@@ -3,6 +3,7 @@ from django.http import Http404
 from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm, RegisterForm
 from .models import Budget, HomePageMessages, Teacher, Publication, Budget
+from .filters import TeacherFilter
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -41,7 +42,10 @@ def publications(request):
 def teachers(request):
     template = 'teachers.html'
     teachers = Teacher.objects.all()
+    teachers_filter = TeacherFilter(request.GET, queryset=teachers)
+    teachers = teachers_filter.qs
     context = {
+        'teachers_filter': teachers_filter,
         'teachers': teachers
     }
     return render(request, template, context)
