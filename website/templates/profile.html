@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    .profile-main {
+        margin: 3em 0;
+    }
+    .profile-main-top,
+    .profile-main-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 2em 0;
+    }
+    .profile-main-top div,
+    .profile-main-bottom div {
+        width: 30%;
+        background: lightgray;
+        border-radius: 10px;
+        height: 300px;
+    }
+    .profile-main-top div h4,
+    .profile-main-bottom div h4 {
+        text-align: center;
+        padding: 10px 0;
+        background: cyan;
+        border-radius: 10px 10px 0 0;
+    }
+</style>
+<!-- If user is Student -->
+<div class="container">
+    <div class="profile-main">
+        <h1>Здравей, {{ username }}</h1>
+        <div class="profile-main-top">
+            <div class="profile-exams">
+                <h4>Предстоящи контролни</h4>
+
+            </div>
+            <div class="profile-classnews">
+                <h4>Класови съобщения</h4>
+
+            </div>
+            <div class="profile-syllabus">
+                <!-- show one day per view -->
+                <h4>Седмична програма</h4>
+
+            </div>
+        </div>
+        <div class="profile-main-bottom">
+            <div class="profile-freedays">
+                <h4>Неучебни дни</h4>
+
+            </div>
+            <div class="profile-marks">
+                <h4>Оценки/отсъствия</h4>
+
+            </div>
+            <div class="profile-class-teacher">
+                <h4>Класен ръководител</h4>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

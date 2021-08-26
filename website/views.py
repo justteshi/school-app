@@ -141,6 +141,16 @@ def more(request):
 
     return render(request, template, context)
 
+
+def profile(request):
+    template = 'profile.html'
+    name = request.user.first_name
+    context = {
+        'username': name
+    }
+
+    return render(request, template, context)
+
 def register_view(request):
     if request.method == "GET":
         form = RegisterForm()
@@ -180,7 +190,7 @@ def login_view(request):
 
             if user != None:
                 login(request, user)
-                return redirect('/')
+                return redirect('/profile')
             else:
                 # attempt = request.session.get('attempt') or 0
                 # request.session['attempt'] = attempt + 1
