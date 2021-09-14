@@ -1,6 +1,9 @@
 from website.models import HomePageMessages
 from django.contrib import admin
 from .models import *
+from django.contrib.auth.admin import UserAdmin
+
+
 
 # Register your models here.
 
@@ -10,6 +13,24 @@ def duplicate_article(modeladmin, request, queryset):
         object.id = None
         object.save()
 duplicate_article.short_description = "Duplicate selected record"
+
+
+@admin.register(User)
+class CustomUserAdmin(UserAdmin):
+    model = User
+
+    fieldsets = (
+        *UserAdmin.fieldsets,
+        (
+            'User role',
+            {
+                'fields':(
+                    'is_student',
+                    'is_teacher'
+                )
+            }
+        )
+    )
 
 
 @admin.register(HomePageMessages)
@@ -37,3 +58,8 @@ class BudgetAdmin(admin.ModelAdmin):
 @admin.register(ClassTest)
 class ClassTestAdmin(admin.ModelAdmin):
     list_display = ('subject', 'klas', 'paralelka', 'srok', 'date')
+
+
+@admin.register(ClassOfStudents)
+class ClassOfStudentsAdmin(admin.ModelAdmin):
+    pass

@@ -1,7 +1,28 @@
 from django.db import models
 from django.db.models.fields import CharField
+from django.contrib.auth.models import AbstractUser
+
+
+
+KLAS_CHOICES = (
+    ('8','8'),
+    ('9','9'),
+    ('10','10'),
+    ('11','11'),
+    ('12','12'),
+)
+PARALELKA_CHOICES = (
+    ('А', 'А'),
+    ('Б', 'Б'),
+    ('В', 'В'),
+    ('Г', 'Г'),
+)
 
 # Create your models here.
+class User(AbstractUser):
+    is_student = models.BooleanField('student status', default=False)
+    is_teacher = models.BooleanField('teacher status', default=False)
+
 
 class HomePageMessages(models.Model):
     title = models.CharField(max_length=100)
@@ -75,19 +96,7 @@ class ClassTest(models.Model):
         ('I срок', 'I срок'),
         ('II срок', 'II срок')
     )
-    KLAS_CHOICES = (
-        ('8','8'),
-        ('9','9'),
-        ('10','10'),
-        ('11','11'),
-        ('12','12'),
-    )
-    PARALELKA_CHOICES = (
-        ('А', 'А'),
-        ('Б', 'Б'),
-        ('В', 'В'),
-        ('Г', 'Г'),
-    )
+
 
     subject = models.CharField(max_length=50, choices=SUBJECT_CHOICES)
     date = models.DateField()
@@ -97,3 +106,11 @@ class ClassTest(models.Model):
 
     def __Str__(self):
         return self.subject + self.klas + self.paralelka
+
+
+class ClassOfStudents(models.Model):
+    klas = models.CharField(max_length=50, choices=KLAS_CHOICES)
+    paralelka = models.CharField(max_length=10, choices=PARALELKA_CHOICES)
+
+    def __str__(self):
+        return self.klas + self.paralelka

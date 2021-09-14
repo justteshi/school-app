@@ -144,9 +144,10 @@ def more(request):
 
 def profile(request):
     template = 'profile.html'
-    name = request.user.first_name
+    user = request.user
+    print(user.is_teacher)
     context = {
-        'username': name
+        'user': user
     }
 
     return render(request, template, context)
