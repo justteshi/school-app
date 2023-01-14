@@ -1,5 +1,5 @@
 # PGPCHE UI
-
+Mainly Html and Css styles applied.
 ## About
 [Django](https://www.djangoproject.com/) project with:
 ## Screenshots
